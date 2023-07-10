@@ -64,4 +64,5 @@ def main(summary,start_time,end_time):
 
 
 if __name__ == '__main__':
-    main('google me plz','2023-07-10T10:40:00)' , '2023-07-10T11:00:00 ')
+    
+    main('googleq2   cc  cc ','2023-07-10T10:40:00' , '2023-07-10T11:00:00')

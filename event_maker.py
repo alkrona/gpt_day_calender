@@ -38,13 +38,17 @@ logger.addHandler(f_handler)
 #print(text)
 from datetime import date
 from datetime import datetime
-
+from quickstart import main
 input1="11:00 - 11:45am: Apply for 5 internships"
 input2 = date.today()
 def event_splitter(text):
   events = text.strip().split("\n") # splits prompt into many events
   for event in events:
         summary,start_time,end_time = event_detail_extraction(event,date.today())
+        try :
+            main(summary,start_time,end_time)
+        except :
+            print("didn't work")
         logger.info(f"Summary: {summary}")
         logger.info(f"Start time: {start_time}")
         logger.info(f"End time: {end_time}")
