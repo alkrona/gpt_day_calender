@@ -88,4 +88,6 @@ def test1(data2,start_time):
     start_time_final = datetime.combine(data2, start_time).isoformat()
     print(start_time_final)
 #test1(date.today(),"11:45" )
-event_splitter(text)
+#event_splitter(text)
+if __name__ == '__main__':
+    event_splitter(text)
