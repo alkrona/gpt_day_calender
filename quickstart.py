@@ -13,7 +13,7 @@ from googleapiclient.errors import HttpError
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 
-def main():
+def main(summary,start_time,end_time):
     """Shows basic usage of the Google Calendar API.
     Prints the start and name of the next 10 events on the user's calendar.
     """
@@ -41,16 +41,16 @@ def main():
         # Call the Calendar API
         now = datetime.datetime.utcnow().isoformat() + 'Z'  # 'Z' indicates UTC time
         print('Getting the upcoming 10 events')
-        summary = " hee hee"
+       
         
         event = {
         'summary': summary,
         'start': {
-            'dateTime': '2023-07-11T12:00:00',
+            'dateTime': start_time,
             'timeZone': 'Australia/Melbourne',
         },
         'end': {
-            'dateTime': '2023-07-11T15:00:00',
+            'dateTime': end_time,
             'timeZone': 'Australia/Melbourne',
         },
     }
@@ -64,4 +64,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    
+    main('googleq2   cc  cc ','2023-07-10T10:40:00' , '2023-07-10T11:00:00')

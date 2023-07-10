@@ -31,3 +31,13 @@ The time now is 10:40 am
 I want to sleep by 11:59pm
 Also include adequate breaks in between
 Also water drinking timing , my goal is to drink 2 liters of water today """))
+text1=llm_chain.predict(human_input="""Things that I want to do today
+Apply for 5 interships
+Work for atleast 2 hours on my german speaker project
+Work for atleast 2 hours on my node website project
+Workout at the gym 
+Read my book for 1 hour 
+The time now is 10:40 am 
+I want to sleep by 11:59pm
+Also include adequate breaks in between
+Also water drinking timing , my goal is to drink 2 liters of water today """)
