@@ -6,6 +6,8 @@ template = """Design a day plan for me the times should be given for all activit
    should have a start time and end time and all times should be in ISO 8601 format
    The plan should be sustainable and also sprinkle in workds of encouragement and advice
     the following is the tasks and conditions of the user. Spread out the tasks throughout the day.
+    Also time should be in the 24 hour format
+    
      {human_input}
     """
 prompt = PromptTemplate(
