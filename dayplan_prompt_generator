@@ -1,0 +1,31 @@
+from langchain import OpenAI, LLMChain, PromptTemplate
+import os 
+from Apikey import Apikey
+os.environ['OPENAI_API_KEY']=Apikey
+template = """Design a day plan for me the times should be given for all activities 
+   should have a start time and end time and all times should be in ISO 8601 format
+   The plan should be sustainable and also sprinkle in workds of encouragement and advice
+    the following is the tasks and conditions of the user. Spread out the tasks throughout the day.
+     {human_input}
+    """
+prompt = PromptTemplate(
+        input_variables=["human_input"],
+        template=template
+    )
+llm = OpenAI(temperature=0.9)
+llm_chain = LLMChain(
+        llm=llm,
+        prompt=prompt,
+        verbose=True,
+        
+    )
+print(llm_chain.predict(human_input="""Things that I want to do today
+Apply for 5 interships
+Work for atleast 2 hours on my german speaker project
+Work for atleast 2 hours on my node website project
+Workout at the gym 
+Read my book for 1 hour 
+The time now is 10:40 am 
+I want to sleep by 11:59pm
+Also include adequate breaks in between
+Also water drinking timing , my goal is to drink 2 liters of water today """))
