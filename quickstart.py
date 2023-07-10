@@ -46,11 +46,11 @@ def main():
         event = {
         'summary': summary,
         'start': {
-            'dateTime': '2023-07-11T12:00:00+02:00',
+            'dateTime': '2023-07-11T12:00:00',
             'timeZone': 'Australia/Melbourne',
         },
         'end': {
-            'dateTime': '2023-07-11T15:00:00+02:00',
+            'dateTime': '2023-07-11T15:00:00',
             'timeZone': 'Australia/Melbourne',
         },
     }
